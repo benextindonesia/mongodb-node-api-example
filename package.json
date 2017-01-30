@@ -1,0 +1,36 @@
+{
+  "name": "mongodb-node-api-example",
+  "version": "1.0.0",
+  "description": "MongoDB integrated API using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revzankamarullah/mongodb-node-api-example.git"
+  },
+  "keywords": [
+    "mongodb",
+    "api",
+    "node",
+    "js",
+    "simple",
+    "api",
+    "mongoose"
+  ],
+  "author": "revzankamarullah@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/revzankamarullah/mongodb-node-api-example/issues"
+  },
+  "homepage": "https://github.com/revzankamarullah/mongodb-node-api-example#readme",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "body-parser": "^1.16.0",
+    "cors": "^2.8.1",
+    "dotenv": "^4.0.0",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.0"
+  }
+}
