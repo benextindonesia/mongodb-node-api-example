@@ -1,6 +1,12 @@
+// Importing Dependencies
+// On every service file or controller, import the related model.
 var UserModel = require('../models/UserModel');
 
+// Creating User Service
 var UserService = {
+
+
+    //Get All Users
     getUsers:function (callback) {
         UserModel.find({},function (err,data) {
             if(err){
@@ -10,6 +16,9 @@ var UserService = {
             callback({status:true,message:"REQUEST_SUCCESS",data:data});
         })
     },
+
+
+    // Get Specified User
     getUser:function (id,callback) {
         UserModel.findById(id,function (err,data) {
             if(err){
@@ -19,6 +28,9 @@ var UserService = {
             callback({status:true,message:"REQUEST_SUCCESS",data:data});
         })
     },
+
+
+    // Adding New User
     addUser: function (params,callback) {
         var newUser = new UserModel({
             name:params.name,
@@ -34,6 +46,9 @@ var UserService = {
 
         })
     },
+
+
+    // Updating User Profile
     editUser:function (id,params,callback) {
         UserModel.findById(id,function (err,data) {
             if(err){
@@ -46,6 +61,9 @@ var UserService = {
             callback({status:true,message:"REQUEST_SUCCESS",data:data});
         })
     },
+
+
+    // Deleting User
     deleteUser:function (id,callback) {
         UserModel.remove({_id:id},function (err,data) {
             if(err){

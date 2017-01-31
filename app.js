@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 var db = require('./src/config/database');
 
 
-//Extend application routes
+// Extend application routes
 var UserRouter = require('./src/routers/UserRouter');
 app.use('/',[UserRouter]);
 
